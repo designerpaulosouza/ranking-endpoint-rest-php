@@ -1,6 +1,6 @@
 <?php
 $movement_id = isset($_GET['movement_id']) ? intval($_GET['movement_id']) : 1;
-$api_url = "http://localhost/ranking-endpoint-rest-php'/api.php";
+$api_url = "http://localhost/ranking-endpoint-rest-php/api.php";
 
 // Configuração do payload para enviar à API
 $data = json_encode(["movement_id" => $movement_id]);
@@ -20,7 +20,7 @@ curl_close($ch);
 $ranking = json_decode($response, true);
 
 // Verifica se a API retornou dados válidos
-$movement_name = 'Movimento ' . $ranking['movement'] ?? 'Movimento Desconhecido';
+$movement_name = 'Movimento ' . $ranking['movement'] ?? ' Desconhecido';
 $records = $ranking['ranking'] ?? [];
 
 ?>

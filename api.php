@@ -57,7 +57,7 @@ foreach ($records as $key => $record) {
 }
 
 echo json_encode([
-    "movement" => $records[0]['movement'] ?? "Movimento não encontrado",
+    "movement" => $records[0]['movement'] ?? " não encontrado",
     "ranking" => $ranking
 ]);
 ?>
